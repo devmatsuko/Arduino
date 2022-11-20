@@ -103,9 +103,9 @@ void loop() {
   }else{    
     //オープニング(16拍子目にスイッチオン」)
     part_1();
-    // 1:09
-    delay(45000);
-    // 1:50(パート1の終わりの音でスイッチオン)
+    // 1:08
+    delay(30000);
+    // 1:35(パート1の終わりの音でスイッチオン)
     delay(13000);
     // part2(2:07~3:37) 
     part_2();
@@ -113,8 +113,6 @@ void loop() {
     delay(11500);
     // 3:51
     part_3();
-    
-  
   }
    delay(10000000);//ループ防止
 }
@@ -698,14 +696,8 @@ void part_1() {
   }
   fullColorSquareOne(2, black, 0);
   // 0:59
-  delay(6700);
-  // 1:07
-  fullColorOne(0, white,460);
-  fullColorOne(1, white,460);
-  fullColorOne(2, white,460);
-  fullColorOne(3, white,460);
-  fullColorSquareAll(white,0);
-  // 1:09
+  delay(8700);
+  // 1:08
 }
 
 void part_2() {
@@ -713,7 +705,7 @@ void part_2() {
   fullColorSquareAll(black,0);
   fullColorAll(black,0);
   delay(500);
-  for(uint16_t i=0; i<32; i++) {
+  for(uint16_t i=0; i<24; i++) {
     fullColorOne(0, green,0);
     fullColorOne(2, green,455);
     fullColorOne(0, black,0);
@@ -723,50 +715,68 @@ void part_2() {
     fullColorOne(1, black,0);
     fullColorOne(3, black,0);
   }
-  fullColorSquareAll(green,0);
-  fullColorAll(green,0);
-  // 2:36
-  delay(47000);
-  // 3:24
+  fullColorOne(0, green,455);
+  fullColorOne(1, green,455);
+  fullColorOne(2, green,455);
+  fullColorOne(3, green,455);
+  fullColorOne(0, black,455);
+  fullColorOne(1, black,455);
+  fullColorOne(2, black,455);
+  fullColorOne(3, black,0);
+  // 2:18
+  delay(51000);
+  // 3:09
   // 左から赤になる
-  fullColorOne(0, orange,460);
-  fullColorOne(1, orange,460);
-  fullColorOne(2, orange,460);
-  fullColorOne(3, orange,460);
-  fullColorSquareAll(orange,0);
-  // 3:26
+  fullColorOne(0, red,460);
+  fullColorOne(1, red,460);
+  fullColorOne(2, red,460);
+  fullColorOne(3, red,460);
+  fullColorSquareAll(red,0);
+  // 3:11
   delay(3000);
-  // 3:29
+  // 3:12
   // 左から青になる
   fullColorOne(0, blue,50);
   fullColorOne(1, blue,50);
   fullColorOne(2, blue,50);
-  fullColorOne(3, blue,850);
+  fullColorOne(3, blue,650);
   fullColorSquareAll(blue,0);
-  delay(5500);
-  // 3:35
+  delay(5700);
+  // 3:20
   // 全色黄色 
   fullColorAll(yellow,0);
   fullColorSquareAll(yellow,0);
-  // 3:33
   delay(1500);
-  // 3:36
+  // 3:22
   // 全色レインボー
   rainbow_moment(4000);
-  // 3:40
+  // 3:26
   // 全部消える  
   fullColorSquareAll(black,0);
   fullColorAll(black,0);
 }
 
 void part_3() {
-  // 3:51~4:22ジワジワ
-  pulseWhite(41,0,15,white);
-  delay(500);
+  // 3:36:~3:44ジワジワ
+  pulseWhite(10,0,15,white);
+  delay(23000);
+  // 4:07
   // 全色レインボー
   rainbow_moment(0);
-  delay(63000);
-  // 5:25
+  delay(5000);
+  // 4:12
+  // 全部消える
+  fullColorOne(0, black,0);
+  fullColorOne(3, black,350);
+  fullColorOne(1, black,0);
+  fullColorOne(2, black,350);
+  fullColorSquareAll(black,0);
+  // 4:13
+  delay(38500);
+  // 4:52
+  rainbow_moment(0);
+  delay(18500);
+  // 5:09
   // 下から上を黒に
   // 4本
   for(uint16_t x=strip[0].numPixels() - 1; x>=1; x=x-1) {
@@ -794,6 +804,11 @@ void part_3() {
   }
   // 四角上辺
   fullColorSquareOne(2, strip[4].Color(0, 0, 0), 50);
+
+  // 5:14
+  delay(5500);
+  // 5:20
+  fullColorSquareAll(black,0);
 }
 
 
