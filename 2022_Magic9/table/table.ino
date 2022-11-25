@@ -808,6 +808,9 @@ void part_3() {
   // 5:14
   delay(5500);
   // 5:20
+  fullColorSquareAll(white,0);
+  delay(2000);
+  // 5:20
   fullColorSquareAll(black,0);
 }
 
