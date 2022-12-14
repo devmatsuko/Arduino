@@ -724,7 +724,7 @@ void part_2() {
   fullColorOne(2, black,455);
   fullColorOne(3, black,0);
   // 2:18
-  delay(51000);
+  delay(51100);
   // 3:09
   // 左から赤になる
   fullColorOne(0, red,460);
@@ -733,7 +733,7 @@ void part_2() {
   fullColorOne(3, red,460);
   fullColorSquareAll(red,0);
   // 3:11
-  delay(3000);
+  delay(2900);
   // 3:12
   // 左から青になる
   fullColorOne(0, blue,50);
@@ -812,5 +812,4 @@ void part_3() {
   pulseWhite(1,0,30,white);
   
 }
-
 
